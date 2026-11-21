@@ -1,0 +1,318 @@
+
+/* Basic page colors and text */
+
+body {
+    margin: 0;
+    background-color: #080e1b;
+    font-family: Arial, sans-serif;
+}
+
+.explorer {
+    min-height: 100vh;
+    padding: 25px;
+    color: white;
+
+    background-image:
+        linear-gradient(rgba(5, 10, 25, 0.75), rgba(5, 10, 25, 0.9)),
+        url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    animation: pageLoad 1s ease;
+}
+
+/* Main heading and intro text */
+
+h1 {
+    text-align: center;
+    color: #65d5f5;
+    font-size: 38px;
+    letter-spacing: 2px;
+    animation: headingMove 1s ease;
+}
+
+.intro {
+    text-align: center;
+    color: #c5d4e8;
+    margin-bottom: 40px;
+}
+
+.backend-status {
+    width: fit-content;
+    margin: -20px auto 30px;
+    padding: 10px 16px;
+    border: 1px solid #45c6e8;
+    border-radius: 6px;
+    background-color: rgba(25, 48, 77, 0.95);
+    color: #d5dfec;
+    text-align: center;
+}
+
+.backend-status-error {
+    border-color: #ef7676;
+    color: #ffd1d1;
+}
+
+.storage-description,
+.saved-empty {
+    color: #c5d4e8;
+}
+
+.saved-planets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.saved-planet {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #344e6b;
+    border-radius: 6px;
+    background-color: rgba(24, 42, 67, 0.95);
+}
+
+.remove-saved-planet {
+    padding: 8px 12px;
+    border-color: #b86161;
+    background-color: #542d3b;
+}
+
+.planet-details {
+    max-width: 700px;
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 4px solid #45c6e8;
+    border-radius: 6px;
+    background-color: rgba(25, 48, 77, 0.95);
+}
+
+.planet-details p {
+    margin: 8px 0;
+    color: #d5dfec;
+    line-height: 1.5;
+}
+
+h2 {
+    color: #80d9f5;
+}
+
+h3 {
+    color: #b9eaff;
+}
+
+/* Main content sections */
+
+section {
+    max-width: 1100px;
+    margin: 30px auto;
+    animation: sectionAppear 0.8s ease;
+}
+
+.highlight {
+    background-color: rgba(25, 48, 77, 0.95);
+    padding: 20px;
+    border-left: 4px solid #45c6e8;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.highlight p {
+    color: #d5dfec;
+    line-height: 1.6;
+}
+
+/* Space news cards are arranged in a two-column grid. */
+
+.general-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.general-card {
+    background-color: rgba(24, 42, 67, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #344e6b;
+}
+
+.general-card h4 {
+    color: #e3f2ff;
+}
+
+/* Links */
+
+a {
+    color: #55d5f5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Flexbox places buttons in a row and wraps them when space is limited. */
+
+.planet-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #193b5d;
+    color: white;
+    border: 1px solid #55a9cf;
+    padding: 11px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #287ca5;
+    transform: scale(1.05);
+}
+
+/* The gallery shows images in three equal columns. */
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.image-card {
+    background-color: #192d48;
+    border: 1px solid #344e6b;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.image-card p {
+    padding: 10px;
+    color: #dcecff;
+    font-size: 13px;
+}
+
+/* Planet news cards are arranged in two columns. */
+
+.news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.news-card {
+    background-color: #192d48;
+    border: 1px solid #344e6b;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.news-card h4 {
+    color: #e3f2ff;
+}
+
+.news-card p {
+    color: #d5dfec;
+    line-height: 1.5;
+}
+
+small {
+    color: #a9c4dc;
+}
+
+/* Page footer */
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #80d9f5;
+    border-top: 1px solid #344e6b;
+}
+
+/* These transitions make cards move smoothly when the pointer hovers over them. */
+
+.highlight,
+.general-card,
+.news-card,
+.image-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover,
+.general-card:hover,
+.news-card:hover,
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.image-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Keyframes describe the start and end steps of each page animation. */
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes headingMove {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sectionAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* On small screens, use one column so the cards fit. */
+
+@media (max-width: 650px) {
+
+    .general-list,
+    .image-gallery,
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+}

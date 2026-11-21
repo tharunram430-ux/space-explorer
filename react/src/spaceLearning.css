@@ -1,0 +1,136 @@
+.space-learning {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.space-learning-layout {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.space-learning-nav {
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #344e6b;
+    border-radius: 8px;
+    background-color: rgba(24, 42, 67, 0.95);
+}
+
+.space-learning-nav button {
+    width: 100%;
+    text-align: left;
+}
+
+.space-learning-nav .learning-nav-active {
+    border-color: #80d9f5;
+    background-color: #287ca5;
+}
+
+.space-learning-content {
+    min-width: 0;
+}
+
+.space-learning-content > h2 {
+    margin-top: 0;
+}
+
+.learning-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.learning-card {
+    padding: 20px;
+    border: 1px solid #344e6b;
+    border-radius: 8px;
+    background-color: rgba(24, 42, 67, 0.95);
+}
+
+.learning-card h3,
+.space-quiz h3 {
+    color: #b9eaff;
+}
+
+.learning-card p,
+.space-quiz p {
+    color: #d5dff0;
+    line-height: 1.6;
+}
+
+.space-quiz {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #344e6b;
+    border-radius: 8px;
+    background-color: rgba(24, 42, 67, 0.95);
+}
+
+.quiz-instructions,
+.quiz-progress {
+    color: #c5d4e8;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.quiz-option {
+    min-height: 48px;
+    text-align: left;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+.quiz-option-correct {
+    border-color: #69d391;
+    background-color: #20583f;
+}
+
+.quiz-option-incorrect {
+    border-color: #ef7676;
+    background-color: #65333b;
+}
+
+.quiz-feedback,
+.quiz-result {
+    padding: 14px;
+    border-left: 4px solid #45c6e8;
+    border-radius: 6px;
+    background-color: rgba(25, 48, 77, 0.95);
+}
+
+.quiz-score,
+.quiz-grade {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 650px) {
+    .space-learning-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .space-learning-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .space-learning-nav button {
+        padding: 10px 8px;
+        text-align: center;
+    }
+
+    .learning-cards,
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}

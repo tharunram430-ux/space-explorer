@@ -1,0 +1,63 @@
+
+
+.head {
+  
+    border-radius: 30px;
+    width: 500px;
+    padding: 30px;
+    text-align: center;
+     background-color: cyan;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+body {
+  background-image: url("../login.jfif");
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.box {
+  border: solid 1px;
+}
+
+input::placeholder {
+  color: white;
+  background-color: black;
+}
+
+input:hover::placeholder {
+  background-color: pink;
+  color: red;
+}
+
+#but {
+  width: 60px;
+  height: 25  px;
+  margin: 20px;
+  
+}
+
+#but:hover {
+  background-color: brown;
+  color: white;
+  border-radius: 5px;
+  border-style: dashed;
+}
+
+.head:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+ 
+}
+.hi1{
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 1vh;
+}
