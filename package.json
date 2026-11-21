@@ -5,7 +5,7 @@
   "description": "Space Explorer MERN full stack application prepared for Vercel deployment",
   "main": "api/index.js",
   "scripts": {
-    "build": "npm --prefix react run build",
+    "build": "npm --prefix react install --include=dev && npm --prefix react run build",
     "client": "npm --prefix react run dev",
     "server": "node server/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

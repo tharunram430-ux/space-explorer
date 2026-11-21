@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm --prefix react run build",
+  "installCommand": "npm install && npm --prefix react install --include=dev",
+  "buildCommand": "npm --prefix react install --include=dev && npm --prefix react run build",
   "outputDirectory": "react/dist",
   "framework": "vite",
   "rewrites": [
